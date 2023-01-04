@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="form_project.css" rel="stylesheet" type="text/css" />
+      
+      <title>Form Project</title>
+  </head>
+  
+  <body>
+    <div id='layout'>
+      <img src="form project imf.jpg" alt=""> <!-- original image size is 1024x600 -->
+
+      <div id="form-block">
+        <div id="form-info">
+          <p>
+            This is a basic user form sample for creating an account.
+            It's for the html and Css form project for 'TOP'. 
+            The lesson covers basic Css styling, html form and basic element utilization.
+          </p>
+        </div>
+        
+        <div>
+          <h4 id="form-title">
+            Top Form Project
+          </h4>
+          
+          <form action="#" method="#">
+            <div id="input-container">
+              <div class="input-row">
+                <div class="input-wrapper">
+                  <label for="first_name">First Name</label><br>
+                  <input type="text" id="first_name" name="first_name">
+                </div>
+              
+                <div class="input-wrapper" style="margin-left: 8%">
+                  <label for="last_name">Last Name</label><br>
+                  <input type="text" id="last_name" name="last_name">
+                </div>
+              </div>
+              
+              <br>
+            
+              <div class="input-row">
+                <div class="input-wrapper">
+                  <label for="email">Email</label><br>
+                  <input type="email" id="email" name="email">
+                </div>
+              
+                <div class="input-wrapper" style="margin-left: 8%">
+                  <label for="phone_number">Phone Number</label><br>
+                  <input type="tel" id="phone_number" name="phone_number">
+                </div>
+              </div>
+
+              <br>
+            
+              <div class="input-row">
+                <div class="input-wrapper">
+                  <label for="password">Password</label><br>
+                  <input type="password" id="password" name="password">
+                </div>
+              
+                <div class="input-wrapper" style="margin-left: 8%">
+                  <label for="confirm_password">Confirm Password</label><br>
+                  <input type="password" id="confirm_password" name="confirm_password">
+                </div>
+              </div>
+            </div>
+            
+            <br>
+
+            <div id="create-acc">
+              <input type="submit" name="submit" value="Create Account">
+            
+              <p id="login-opt" >
+                Already have an account?
+                <a href="#">Log In</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

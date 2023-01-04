@@ -1,0 +1,77 @@
+body {
+  background-color: black;
+}
+
+#layout {
+  width: 700px;
+  height: 500px;
+  margin: auto;
+  position: relative;      /* sets absolute positioning for layout contents( element stacking ) */
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: none;         /* crops instead of resizing the image */
+  object-position: right;   /* target the desired image spot */
+  position: absolute;       /* allow the image to be stacked-on by the form-block */
+}
+
+#form-block {
+  background-color: lavender;
+  height: 100%;
+  width: 60%;                   /* set the width of the form-block */
+  position: absolute;           /* put on top of the form image */
+  right: 0%;                    /* position at the farthest right */
+  
+  display: flex;                /* allow contents to be flexible */
+  flex-direction: column;       /* vertically */
+  justify-content: flex-start;  /* starting from the top */
+}
+
+#form-info {
+  margin: 20px 20px 35px 20px;
+}
+
+#form-title {
+  height: fit-content;
+  margin: unset;                /* remove margins */
+  padding: 17px 0 17px 20px;    /* let the paddings set the spacings */
+  background-color: white;    /* then put the white background */
+}
+
+#input-container {
+  padding: 0 0 35px 20px;
+  background-color: white;
+}
+
+.input-row {
+  width: 100%;
+  height: 10px;
+  font-size: 10px;
+  display: flex;                 /* allow contents to be flexible horizontally( default direction ) */
+  justify-content: flex-start;   /* starting at the left side */
+  margin-bottom: 8px;            /* then add spacing to each row */
+}
+
+.input-wrapper {
+  height: 100%;
+  width: 27%
+}
+
+input {
+  width: 100%;
+  height: 100%;
+}
+
+#create-acc {
+  margin-left: 20px;
+}
+
+input[type=submit] {
+  width: auto;
+}
+
+#login-opt {
+  font-size: 11px;
+}
