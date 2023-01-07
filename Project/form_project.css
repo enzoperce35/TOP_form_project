@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Norse-bold';
+  src: url('/Project/Norse-Bold.otf'); /* an external font downloaded and then added to project directory */
+}
+
 body {
   background-color: black;
 }
@@ -9,12 +14,55 @@ body {
   position: relative;      /* sets absolute positioning for layout contents( element stacking ) */
 }
 
-img {
+img[id=form-bg] {
   width: 100%;
   height: 100%;
   object-fit: none;         /* crops instead of resizing the image */
   object-position: right;   /* target the desired image spot */
   position: absolute;       /* allow the image to be stacked-on by the form-block */
+}
+
+#img-block {                /* left block: contains the logo and footer */
+  height: 100%;
+  width: 40%;
+  position: absolute;       /* allow element stacking */
+  display: flex;            /* and flexible spacings between elements( logo-cont & footer ) */
+  flex-direction: column;   /* vertically */
+}
+
+#logo-cont {
+  width: 100%;                             /* set container dimensions */
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.6);  /* add a black, semi-opaqued background */
+  top: 14.5%;                              /* flex 14.5% from the top of img-block */
+  
+  position: absolute;                      /* allow element stacking */ 
+  display: flex;                           /* and flex spacing between contents( odin logo & name' ) */
+  justify-content: center;                 /* horizontally centered */
+  padding: 6px;
+  
+  line-height: 80px;                       /* take the height of container as a single line height */
+  vertical-align: middle;                  /* to vertically align 'ODIN' centered */
+  font-family: 'Norse-bold';
+  color: honeydew;
+  font-size: 50px;
+}
+
+.footer {
+  height: 7%;                 /* set footer dimensions */
+  width: 100%;
+  bottom: 0%;                 /* position at the bottom of img-block */
+  
+  position: absolute;         /* allow element stacking */
+  display: flex;              /* and flexible spacing for the footer message */
+  flex-direction: column;     /* vertically */
+  justify-content: center;    /* and centered */
+}
+
+.footer div {
+  font-size: xx-small;        /* set footer text attributes */
+  color: honeydew;
+  margin: auto;               /* position horizontally centered */
 }
 
 #form-block {
@@ -24,19 +72,23 @@ img {
   position: absolute;           /* put on top of the form image */
   right: 0%;                    /* position at the farthest right */
   
-  display: flex;                /* allow contents to be flexible */
+  display: flex;                /* allow flexible spacing */
   flex-direction: column;       /* vertically */
   justify-content: flex-start;  /* starting from the top */
 }
 
 #form-info {
-  margin: 20px 20px 35px 20px;
+  font-weight: bold;
+  height: 22%;
+  margin: 35px 20px 20px 20px;
+  font-size: 14px;
+  line-height: 20px;            /* apply 6px spacings into each line */
 }
 
 #form-title {
   height: fit-content;
   margin: unset;                /* remove margins */
-  padding: 17px 0 17px 20px;    /* let the paddings set the spacings */
+  padding: 17px 0 15px 20px;    /* let the paddings set the spacings */
   background-color: white;    /* then put the white background */
 }
 
@@ -48,15 +100,20 @@ img {
 .input-row {
   width: 100%;
   height: 10px;
-  font-size: 10px;
-  display: flex;                 /* allow contents to be flexible horizontally( default direction ) */
-  justify-content: flex-start;   /* starting at the left side */
-  margin-bottom: 8px;            /* then add spacing to each row */
+  display: flex;                  /* allow flexible spacing between contents horizontally( default direction ) */
+  justify-content: flex-start;    /* starting at the left side */
+  margin-bottom: 10px;            /* then add bottom spacing to each row */
 }
 
 .input-wrapper {
   height: 100%;
-  width: 27%
+  width: 30%
+}
+
+label {
+  font-size: 7.1px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 input {
