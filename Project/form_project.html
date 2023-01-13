@@ -44,7 +44,7 @@
             Top Form Project
           </h4>
           
-          <form action="#" method="#">
+          <form action="#" method="#" onsubmit="return validateForm(this)" novalidate> <!-- validate user input through js(disabled html validation) -->
             <div id="input-container">
               <div class="input-row">
                 <div class="input-wrapper">
@@ -103,3 +103,5 @@
     </div>
   </body>
 </html>
+
+<script src=form_project.js></script>
